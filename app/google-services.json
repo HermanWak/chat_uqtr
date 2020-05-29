@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "17480668351",
+    "firebase_url": "https://chat-11606.firebaseio.com",
+    "project_id": "chat-11606",
+    "storage_bucket": "chat-11606.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:17480668351:android:964d5c31a99c34a3a5620a",
+        "android_client_info": {
+          "package_name": "com.stampi.chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "17480668351-vhq1ibei7sd4knrb5aut4jf8fru9rrgu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.stampi.chat",
+            "certificate_hash": "2559bca18405f147bd1d2fb79e0c30ae33361c63"
+          }
+        },
+        {
+          "client_id": "17480668351-2jgtidajg2f2cglr9eed93oebu98pihp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA53TiyNotyEdxLrw7Tr77pMr4c9gWnW3o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "17480668351-2jgtidajg2f2cglr9eed93oebu98pihp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
