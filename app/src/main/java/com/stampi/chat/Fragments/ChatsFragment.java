@@ -79,38 +79,26 @@ public class ChatsFragment extends Fragment {
     private void readChats() {
         list = new ArrayList<>();
         reference = FirebaseDatabase.getInstance().getReference("Users");
+
         reference.addValueEventListener(new ValueEventListener() {
-        @Override
-        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-            list.clear();
-            for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                User user = snapshot.getValue(User.class);
-                // affichage des user du chat
-                for (String id : listUser) {
-                    if (user.getId().equals(id)) {
-                        if (list.size() != 0) {
-                            List<User> users = new ArrayList<>(list);
-                            for (User u : users) {
-                                User user1 = u;
-//                                 for(int i=0; i<list.size();i++){
-                                if (!user.getId().equals(user1.getId())) {
-                                    list.add(user);
-                                }
-                            }
-                        } else {
-                            list.add(user);
-                        }
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                list.clear();
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                    User user = snapshot.getValue(User.class);
+                    // affichage des user du chat
+                    if(!fuser.getUid().equals(user.getId()) ? !list.contains(user) && listUser.contains(user.getId()) :false){
+                        list.add(user);
                     }
                 }
+                adapter = new UserAdapter(getContext(), list, true);
+                recyclerView.setAdapter(adapter);
             }
-            adapter = new UserAdapter(getContext(), list, true);
-            recyclerView.setAdapter(adapter);
-        }
 
-        @Override
-        public void onCancelled(@NonNull DatabaseError databaseError) {
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
 
-        }
-    });
-}
+            }
+        });
+    }
 }
