@@ -17,14 +17,10 @@ public class StartActivity extends AppCompatActivity {
 
     FirebaseUser firebaseUser;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
-
-
 
         btn_register = findViewById(R.id.btn_register);
         btn_login = findViewById(R.id.btn_login);
